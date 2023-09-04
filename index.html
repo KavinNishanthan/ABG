@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absent Students List</title>
+    <style>
+        /* Your CSS styles here */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input field styles */
+        input[type="text"] {
+            width: 100%; /* Takes the full width of the container */
+            max-width: 400px; /* Set a maximum width if needed */
+            padding: 10px; /* Adjust padding as needed */
+            margin: 10px 0;
+        }
+
+        /* Output field styles */
+        #studentNames {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Additional CSS styles for responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Students Name List and Roll No Generator</h1>
+        <label for="rollNumbers">Enter Roll Numbers (comma-separated):</label>
+        <input type="text" id="rollNumbers">
+        <button onclick="showAbsentStudents()">Submit</button>
+        <div id="studentNames"></div>
+        <br>
+        <button id="copyButton" style="display: none;" onclick="copyStudentList()">Copy List</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
